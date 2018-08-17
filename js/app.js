@@ -76,7 +76,7 @@ Bakery.prototype.render = function() {
 
   patTable.appendChild(trEl);
 };
-
+// creates header row
 function makeHeaderRow() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
@@ -95,13 +95,13 @@ function makeHeaderRow() {
 
   patTable.appendChild(trEl);
 }
-
+// displays sales
 function displaySales() {
   for(var i = 0; i < storeLocations.length; i++){
     storeLocations[i].render();
   }
 }
-
+// creates footer row
 function createFooter() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
@@ -141,24 +141,28 @@ for(var i = 0; i < hoursOpen.length; i++) {
 function newBakerySubmit (event) {
   event.preventDefault();
 
-  if (!event.target.bakery.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value) {
-    return alert ('All fields required, please resubmit! Danke!');
-  }
-
-  var newName = event.target.bakery.value;
-  var newMin = event.target.min.value;
-  var newMax = event.target.max.value;
-  var newAvg = event.target.avg.value;
-  var newBakery = new Bakery (newName, newMin, newMax, newAvg);
+  var newName = event.target.newLocation.value;
+  var newMin = event.target.minimumCustomers.value;
+  var newMax = event.target.maximumCustomers.value;
+  var newAvg = event.target.avgCookiesPerCustomer.value;
+  new Bakery (newName, newMin, newMax, newAvg);
 
   console.table(storeLocations);
 
-  newBakery.render();
+  // newBakery.render();
 
-  event.target.store.value = null;
-  event.target.min.value = null;
-  event.target.max.value = null;
-  event.target.avg.value = null;
+  event.target.newLocation.value = null;
+  event.target.minimumCustomers.value = null;
+  event.target.maximumCustomers.value = null;
+  event.target.avgCookiesPerCustomer.value = null;
+
+  // cookieForm.innerHTML = '';
+
+  patTable.innerHTML = '';
+  makeHeaderRow();
+  displaySales();
+  createFooter();
+
 }
 
 cookieForm.addEventListener('submit', newBakerySubmit);
@@ -166,12 +170,12 @@ makeHeaderRow();
 displaySales();
 createFooter();
 
-updateForm.addEventListener('click', function() {
-  // Empties input fields
-  cookieForm.innerHTML = '';
+// updateForm.addEventListener('submit', function() {
+//   // Empties form
+//   cookieForm.innerHTML = '';
 
-  patTable.innerHTML = '';
-  makeHeaderRow();
-  displaySales();
-  createFooter();
-});
+//   patTable.innerHTML = '';
+//   makeHeaderRow();
+//   displaySales();
+//   createFooter();
+// });

@@ -15,8 +15,21 @@ h1 {
     font-size: 40px;    
 }
 
+h2 {
+    padding: 3px;
+}
+
+h3 {
+    padding: 3px;
+}
+
 ul {
-    padding: 2px;
+    padding: 3px;
+}
+
+li {
+    margin: 3px;
+    padding: 1px;
 }
 
 .chinook-fish {
@@ -29,14 +42,15 @@ ul {
     margin: 60px;
 };
 
-.family-photo {
-    width: 250px;
-    margin: 90px;
-};
 
 .rainbow-fish {
     width: 250px;
     margin: 30px;
+};
+
+.family-photo {
+    width: 100px;
+    margin: 90px;
 };
 
 .frosted-cookie-fish {

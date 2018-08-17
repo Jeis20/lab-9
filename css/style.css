@@ -1,0 +1,55 @@
+*{color: black
+}
+
+body {
+
+    background-color: rgb(50, 119, 221);
+}
+
+h1 {
+    background-color:rgb(221, 66, 66);
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 40px;    
+}
+
+ul {
+    padding: 2px;
+}
+
+.chinook-fish {
+    width: 250px;
+    margin: 30px;
+};
+
+.cutter-fish {
+    width: 250px;
+    margin: 60px;
+};
+
+.family-photo {
+    width: 250px;
+    margin: 90px;
+};
+
+.rainbow-fish {
+    width: 250px;
+    margin: 30px;
+};
+
+.frosted-cookie-fish {
+    width: 250px;
+    margin: 30px;
+};
+
+.salmon {
+    width: 250px;
+    margin: 30px;
+};
+
+.fish-shirt {
+    width: 250px;
+    margin: 30px;
+};
